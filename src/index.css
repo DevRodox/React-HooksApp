@@ -5,3 +5,16 @@ body{
 button{
     margin-right: 10px;
 }
+
+.character-container{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.character-img{
+    width: 80%; 
+    height: 300px; 
+    border-radius: 21px 21px 0 0;
+}
