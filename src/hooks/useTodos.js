@@ -34,7 +34,7 @@ export const useTodos = () => {
             type: '[TODO] Toggle Todo',
             payload: id
         });
-    }
+    };
 
     return {
         todos,
@@ -43,5 +43,5 @@ export const useTodos = () => {
         handleNewTodo,
         handleDeleteTodo,
         handleToggleTodo,
-    }
+    };
 };
