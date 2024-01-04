@@ -12,15 +12,19 @@ const initialState = [
         description: 'Aprender css',
         done: false,
     }
-
 ];
 
 export const TodoApp = () => {
 
-    const [ todos, dispatchTodo ] = useReducer( todoReducer, initialState);
+    const [ todos, dispatch ] = useReducer( todoReducer, initialState);
 
     const handleNewTodo = (todo) => {
-        console.log({ todo })
+        const action = {
+            type: '[TODO] Add Todo',
+            payload: todo
+        }
+
+        dispatch( action );
     };
 
     return(
