@@ -20,7 +20,6 @@ export const TodoApp = () => {
     const [ todos, dispatchTodo ] = useReducer( todoReducer, initialState);
 
     const handleNewTodo = (todo) => {
-        event.preventDefault();
         console.log({ todo })
     };
 
