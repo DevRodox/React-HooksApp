@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 
 // import { HooksApp } from './HooksApp';
 // import { CounterApp } from './01-useState/CounterApp';
@@ -16,16 +16,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import { Padre } from './07-tarea-memo/Padre';
 // import './08-useReducer/intro-reducer.js';
 // import { TodoApp } from './08-useReducer/TodoApp';
-import { MainApp } from './09-useContext/MainApp';
+import { getRoutes } from './09-useContext/Routes';
 
 import './index.css';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <MainApp/>,
-  },
-]);
+const router = getRoutes();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
