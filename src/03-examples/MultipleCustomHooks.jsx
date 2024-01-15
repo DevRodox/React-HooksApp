@@ -17,6 +17,14 @@ export const MultipleCustomHooks = () => {
                             data = { data } 
                             increment = { increment }/> )
             }
+
+            <button 
+                className='btn btn-primary' 
+                onClick={ () => increment() }
+                disabled = { isLoading }
+                >
+                Next Character
+            </button>
         </>
     );
 };

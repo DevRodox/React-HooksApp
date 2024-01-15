@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 
-export const Character = ({ data, increment }) => {
+export const Character = ({ data }) => {
 
     const h2Ref = useRef();
     const [boxSize, setBoxSize] = useState({
@@ -16,7 +16,7 @@ export const Character = ({ data, increment }) => {
         });
     }, [data])
 
-    const { name, species, image } = data;
+    const { name, species, image } = data ?? {};
 
     return(
         <>
@@ -24,11 +24,6 @@ export const Character = ({ data, increment }) => {
                 <div className="my-3 py-3">
                     <h2 ref={h2Ref} className="display-5">{ name }</h2>
                     <p className="lead">{ species }</p>
-                    <button 
-                        className='btn btn-primary' 
-                        onClick={ () => increment() }>
-                        Next Character
-                    </button>
                 </div>
                 <div className="bg-body shadow-sm mx-auto character-img" >
                     <img src={ image } alt={ name } />
