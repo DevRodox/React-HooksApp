@@ -5,7 +5,7 @@ import { AboutPage } from "./AboutPage";
 import { LoginPage } from "./LoginPage";
 
 
-export const getRoutes = () => createBrowserRouter([
+export const getRoutes = [
     {
         path: "/",
         element: <MainApp/>,
@@ -29,4 +29,4 @@ export const getRoutes = () => createBrowserRouter([
             }
         ]
     }
-]);
+];
